@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Keuangan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tfoot td {
+            font-weight: bold;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tabel Keuangan</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Tanggal</th>
+                <th>Deskripsi</th>
+                <th>Pendapatan</th>
+                <th>Pengeluaran</th>
+                <th>Saldo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2024-02-01</td>
+                <td>Gaji Bulanan</td>
+                <td>5,000,000</td>
+                <td>-</td>
+                <td>5,000,000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2024-02-05</td>
+                <td>Belanja Bulanan</td>
+                <td>-</td>
+                <td>1,200,000</td>
+                <td>3,800,000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2024-02-10</td>
+                <td>Makan di Luar</td>
+                <td>-</td>
+                <td>300,000</td>
+                <td>3,500,000</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>2024-02-15</td>
+                <td>Bonus Proyek</td>
+                <td>2,000,000</td>
+                <td>-</td>
+                <td>5,500,000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Total Sisa Saldo</td>
+                <td>5,500,000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
