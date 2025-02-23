@@ -80,18 +80,20 @@
             justify-content: space-around;
             padding: 50px;
             background: #fffde7;
+            flex-wrap: wrap;
         }
         .feature, .content {
             text-align: center;
             width: 30%;
+            margin-bottom: 20px;
         }
-        .feature h3, .content h3 {
-            color: #2e7d32;
-        }
-        .content img {
+        .feature img, .content img {
             width: 100%;
             height: auto;
             border-radius: 10px;
+        }
+        .feature h3, .content h3 {
+            color: #2e7d32;
         }
         footer {
             text-align: center;
@@ -100,31 +102,12 @@
             padding: 15px;
         }
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px;
-            }
-            nav ul {
-                flex-direction: column;
-                padding-top: 10px;
-            }
-            nav ul li {
-                margin: 10px 0;
-            }
             .features, .content-section {
                 flex-direction: column;
                 align-items: center;
             }
             .feature, .content {
                 width: 90%;
-                margin-bottom: 20px;
-            }
-            .hero h1 {
-                font-size: 28px;
-            }
-            .hero p {
-                font-size: 16px;
             }
         }
     </style>
@@ -154,18 +137,47 @@
         <h1>Selamat Datang di Website Kami</h1>
         <p>Solusi terbaik untuk bisnis Anda.</p>
     </section>
+    <section class="features">
+        <div class="feature">
+            <img src="https://via.placeholder.com/50" alt="Icon 1">
+            <h3>Feature 1</h3>
+            <p>Deskripsi singkat fitur pertama.</p>
+        </div>
+        <div class="feature">
+            <img src="https://via.placeholder.com/50" alt="Icon 2">
+            <h3>Feature 2</h3>
+            <p>Deskripsi singkat fitur kedua.</p>
+        </div>
+        <div class="feature">
+            <img src="https://via.placeholder.com/50" alt="Icon 3">
+            <h3>Feature 3</h3>
+            <p>Deskripsi singkat fitur ketiga.</p>
+        </div>
+    </section>
+    <section class="content-section">
+        <div class="content">
+            <img src="https://via.placeholder.com/400x300" alt="Content 1">
+            <h3>Konten 1</h3>
+            <p>Deskripsi singkat konten pertama.</p>
+        </div>
+        <div class="content">
+            <img src="https://via.placeholder.com/400x300" alt="Content 2">
+            <h3>Konten 2</h3>
+            <p>Deskripsi singkat konten kedua.</p>
+        </div>
+        <div class="content">
+            <img src="https://via.placeholder.com/400x300" alt="Content 3">
+            <h3>Konten 3</h3>
+            <p>Deskripsi singkat konten ketiga.</p>
+        </div>
+        <div class="content">
+            <img src="https://via.placeholder.com/400x300" alt="Content 4">
+            <h3>Konten 4</h3>
+            <p>Deskripsi singkat konten keempat.</p>
+        </div>
+    </section>
     <footer>
         &copy; 2024 Perusahaan Anda. Hak Cipta Dilindungi.
     </footer>
-    <script>
-        let slides = document.querySelectorAll('.slide');
-        let index = 0;
-        function nextSlide() {
-            slides[index].classList.remove('active');
-            index = (index + 1) % slides.length;
-            slides[index].classList.add('active');
-        }
-        setInterval(nextSlide, 3000);
-    </script>
 </body>
 </html>
