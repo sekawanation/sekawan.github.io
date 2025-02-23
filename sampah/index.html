@@ -14,18 +14,19 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            background: #f4f9f4;
+            color: #2c3e50;
         }
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #333;
+            background: #2e7d32;
             color: white;
             padding: 15px 50px;
         }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
+        .logo img {
+            height: 50px;
         }
         nav ul {
             list-style: none;
@@ -41,15 +42,17 @@
         .hero {
             text-align: center;
             padding: 50px;
-            background: #f4f4f4;
+            background: #e8f5e9;
             flex: 1;
         }
         .hero h1 {
             font-size: 36px;
+            color: #2e7d32;
         }
         .hero p {
             margin-top: 10px;
             font-size: 18px;
+            color: #558b2f;
         }
         .slider {
             width: 100%;
@@ -68,48 +71,65 @@
             width: 100%;
             display: block;
         }
-        .features {
+        .features, .content-section {
             display: flex;
             justify-content: space-around;
             padding: 50px;
-            background: #e4e4e4;
+            background: #fffde7;
         }
-        .feature {
+        .feature, .content {
             text-align: center;
             width: 30%;
         }
-        .feature h3 {
-            margin-bottom: 10px;
-        }
-        .content-section {
-            display: flex;
-            justify-content: space-around;
-            padding: 50px;
-            background: #f9f9f9;
-        }
-        .content {
-            text-align: center;
-            width: 30%;
+        .feature h3, .content h3 {
+            color: #2e7d32;
         }
         .content img {
             width: 100%;
             height: auto;
             border-radius: 10px;
         }
-        .content h3 {
-            margin-top: 10px;
-        }
         footer {
             text-align: center;
-            background: #333;
+            background: #2e7d32;
             color: white;
             padding: 15px;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            nav ul {
+                flex-direction: column;
+                padding-top: 10px;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .features, .content-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature, .content {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">LOGO</div>
+        <div class="logo">
+            <img src="https://via.placeholder.com/150x50" alt="Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
