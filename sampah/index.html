@@ -2,54 +2,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Natural</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Landing Page Profesional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            color: white;
+            padding: 15px 50px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: #f4f4f4;
+            flex: 1;
+        }
+        .hero h1 {
+            font-size: 36px;
+        }
+        .hero p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .slider {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slider img {
+            width: 100%;
+            display: block;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            background: #e4e4e4;
+        }
+        .feature {
+            text-align: center;
+            width: 30%;
+        }
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+        .content-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            background: #f9f9f9;
+        }
+        .content {
+            text-align: center;
+            width: 30%;
+        }
+        .content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .content h3 {
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Selamat Datang di Website Kami</h1>
-        <p>Solusi terbaik untuk kebutuhan Anda</p>
+        <div class="logo">LOGO</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+    <section class="slider">
+        <div class="slides">
+            <div class="slide"><img src="https://via.placeholder.com/1200x500" alt="Slide 1"></div>
+            <div class="slide"><img src="https://via.placeholder.com/1200x500" alt="Slide 2"></div>
+            <div class="slide"><img src="https://via.placeholder.com/1200x500" alt="Slide 3"></div>
+        </div>
+    </section>
+    <section class="hero">
+        <h1>Selamat Datang di Website Kami</h1>
+        <p>Solusi terbaik untuk bisnis Anda.</p>
+    </section>
     <section class="features">
-        <div class="feature-item">
-            <i class="fas fa-leaf"></i>
-            <h3>Ramah Lingkungan</h3>
-            <p>Produk kami menggunakan bahan alami.</p>
-            <p>Didukung oleh teknologi ramah lingkungan.</p>
-            <p>Mengurangi jejak karbon.</p>
-            <p>Bersertifikat organik.</p>
+        <div class="feature">
+            <h3>Feature 1</h3>
+            <p>Deskripsi singkat fitur pertama.</p>
         </div>
-        <div class="feature-item">
-            <i class="fas fa-heart"></i>
-            <h3>Peduli Kesehatan</h3>
-            <p>Bebas bahan kimia berbahaya.</p>
-            <p>Aman digunakan oleh semua usia.</p>
-            <p>Meningkatkan kesejahteraan hidup.</p>
-            <p>Teruji secara klinis.</p>
+        <div class="feature">
+            <h3>Feature 2</h3>
+            <p>Deskripsi singkat fitur kedua.</p>
         </div>
-        <div class="feature-item">
-            <i class="fas fa-globe"></i>
-            <h3>Global Impact</h3>
-            <p>Memberdayakan komunitas lokal.</p>
-            <p>Mendukung ekonomi berkelanjutan.</p>
-            <p>Beroperasi di berbagai negara.</p>
-            <p>Bekerja sama dengan NGO global.</p>
+        <div class="feature">
+            <h3>Feature 3</h3>
+            <p>Deskripsi singkat fitur ketiga.</p>
         </div>
     </section>
-    <section class="about">
-        <h2>Tentang Kami</h2>
-        <p>Kami adalah perusahaan yang berdedikasi untuk menyediakan produk alami dan ramah lingkungan.</p>
-        <p>Dengan pengalaman bertahun-tahun, kami terus berinovasi untuk menciptakan solusi terbaik.</p>
-    </section>
-    <section class="contact">
-        <h2>Hubungi Kami</h2>
-        <p>Email: info@websitekami.com</p>
-        <p>Telepon: +62 123 456 789</p>
-        <p>Alamat: Jalan Hijau No. 10, Jakarta</p>
+    <section class="content-section">
+        <div class="content">
+            <img src="https://via.placeholder.com/400x300" alt="Content 1">
+            <h3>Konten 1</h3>
+            <p>Deskripsi singkat konten pertama.</p>
+        </div>
+        <div class="content">
+            <img src="https://via.placeholder.com/400x300" alt="Content 2">
+            <h3>Konten 2</h3>
+            <p>Deskripsi singkat konten kedua.</p>
+        </div>
+        <div class="content">
+            <img src="https://via.placeholder.com/400x300" alt="Content 3">
+            <h3>Konten 3</h3>
+            <p>Deskripsi singkat konten ketiga.</p>
+        </div>
     </section>
     <footer>
-        <p>&copy; 2025 Website Kami. Semua Hak Dilindungi.</p>
+        &copy; 2024 Perusahaan Anda. Hak Cipta Dilindungi.
     </footer>
+    <script>
+        let index = 0;
+        function moveSlide() {
+            const slides = document.querySelector('.slides');
+            index = (index + 1) % 3;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+        setInterval(moveSlide, 3000);
+    </script>
 </body>
 </html>
