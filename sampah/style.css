@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc;
+    color: #4a4a4a;
+    text-align: center;
+}
+
+header {
+    background-color: #e6e0d4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.feature-item {
+    background-color: #fff8e7;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+i {
+    font-size: 40px;
+    color: #8a7f6a;
+}
