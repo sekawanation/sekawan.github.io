@@ -1,0 +1,31 @@
+<?php
+session_start();
+include 'koneksi.php';
+
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'petugas') {
+    header("Location: login.php");
+    exit();
+}
+
+$hari_ini = date('l'); // Ambil hari ini (Senin, Selasa, dll.)
+if ($_SESSION['hari_tugas'] != $hari_ini) {
+    die("Hari ini bukan jadwal tugas Anda.");
+}
+
+// Ambil daftar rumah sesuai jadwal petugas
+$query = "SELECT * FROM warga WHERE id IN (SELECT id_warga FROM jadwal_ronda WHERE hari = ?)";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("s", $hari_ini);
+$stmt->execute();
+$result = $stmt->get_result();
+
+echo "<h2>Selamat datang, " . $_SESSION['nama'] . "</h2>";
+echo "<h3>Rumah yang harus Anda ambil jimpitannya hari ini:</h3>";
+echo "<ul>";
+while ($row = $result->fetch_assoc()) {
+    echo "<li>" . $row['nama_warga'] . " - " . $row['alamat'] . "</li>";
+}
+echo "</ul>";
+
+echo "<a href='logout.php'>Logout</a>";
+?>
