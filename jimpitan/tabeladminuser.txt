@@ -1,0 +1,8 @@
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nama VARCHAR(100),
+    username VARCHAR(50) UNIQUE,
+    password VARCHAR(255),
+    role ENUM('admin', 'petugas'),
+    hari_tugas ENUM('Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu') NULL
+);
